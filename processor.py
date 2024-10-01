@@ -56,7 +56,7 @@ def make_plot(file_name: str, data: dict):
     b = data['b']
 
 
-    scale_coefficient  = 1.1
+    scale_coefficient  = 1.05
 
     # Set domain of definition
     x1_limit = -b / k
@@ -76,6 +76,11 @@ def make_plot(file_name: str, data: dict):
     # Draw axes
     ax.axhline(linewidth=1.5, y=0, color='k')
     ax.axvline(linewidth=1.5, x=0, color='k')
+
+    #plt.xticks(np.arange(np.min(Y), np.max(Y)+1, 2.0))
+    #plt.yticks(np.arange(0, np.max(X)+1, 1.0))
+
+    #ax.set_xticklabels(ax.get_xticklabels(), rotation=90)
 
     # Draw Graph
     plt.plot(X, Y, 'b', label=f"y = kx + b")

@@ -2,6 +2,7 @@ from processor import *
 
 file_name = input("Enter file name: ")
 
+# Get data from text file
 try:
     data = get_data(file_name=file_name) # Get values (x, y) from text file
 except Exception as e:
@@ -27,7 +28,7 @@ except Exception as e:
 if True:
     print("Your data:", data)
 
-
+# Calculate and show graph to user
 try:
     print("Starting calculations...")
     calculated_result = calculate(data) # Calculate result
